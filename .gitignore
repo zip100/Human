@@ -1,0 +1,7 @@
+
+*.log
+*.obj
+*.tlog
+Debug/Human.res
+Debug/vc140.pdb
+Debug/vc140.idb

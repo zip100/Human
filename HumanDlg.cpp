@@ -6,6 +6,7 @@
 #include "Human.h"
 #include "HumanDlg.h"
 #include "afxdialogex.h"
+#include "Http.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -30,6 +31,8 @@ void CHumanDlg::DoDataExchange(CDataExchange* pDX)
 BEGIN_MESSAGE_MAP(CHumanDlg, CDialogEx)
 	ON_WM_PAINT()
 	ON_WM_QUERYDRAGICON()
+	ON_BN_CLICKED(IDOK, &CHumanDlg::OnBnClickedOk)
+	ON_BN_CLICKED(IDC_HTTP, &CHumanDlg::OnBnClickedHttp)
 END_MESSAGE_MAP()
 
 
@@ -85,3 +88,18 @@ HCURSOR CHumanDlg::OnQueryDragIcon()
 	return static_cast<HCURSOR>(m_hIcon);
 }
 
+
+
+void CHumanDlg::OnBnClickedOk()
+{
+	// TODO: 在此添加控件通知处理程序代码
+	CDialogEx::OnOK();
+}
+
+
+void CHumanDlg::OnBnClickedHttp()
+{
+	Http *h = new Http();
+	h = NULL;
+	MessageBox(_T("ok"));
+}
