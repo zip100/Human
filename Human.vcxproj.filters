@@ -36,6 +36,9 @@
     <ClInclude Include="Http.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="HttpException.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Human.cpp">
@@ -48,6 +51,9 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="Http.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="HttpException.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

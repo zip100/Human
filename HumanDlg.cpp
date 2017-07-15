@@ -7,6 +7,7 @@
 #include "HumanDlg.h"
 #include "afxdialogex.h"
 #include "Http.h"
+#include "HttpException.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -100,6 +101,16 @@ void CHumanDlg::OnBnClickedOk()
 void CHumanDlg::OnBnClickedHttp()
 {
 	Http *h = new Http();
+
+	try {
+		h->Get(CString("http://www.redu.com"));
+		MessageBox(h->GetResponse());
+	}
+	catch (HttpException e) {
+		MessageBox(e.what());
+	}
+
+	
+
 	h = NULL;
-	MessageBox(_T("ok"));
 }

@@ -90,11 +90,13 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG ;BUILDING_LIBCURL;HTTP_ONLY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>D:\curl-7.32.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
+      <AdditionalDependencies>D:\curl-7.32.0\vs\vc8\lib\Release\libcurl.lib;ws2_32.lib;winmm.lib;wldap32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <Midl>
       <MkTypLibCompatible>false</MkTypLibCompatible>
@@ -186,6 +188,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Http.h" />
+    <ClInclude Include="HttpException.h" />
     <ClInclude Include="Human.h" />
     <ClInclude Include="HumanDlg.h" />
     <ClInclude Include="Resource.h" />
@@ -194,6 +197,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Http.cpp" />
+    <ClCompile Include="HttpException.cpp" />
     <ClCompile Include="Human.cpp" />
     <ClCompile Include="HumanDlg.cpp" />
     <ClCompile Include="stdafx.cpp">
